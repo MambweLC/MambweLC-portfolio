@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mambwe Luke Chilebela · Software Engineer, Lusaka</title>
+<meta name="description" content="Software engineer and network field engineer from Lusaka, Zambia. BSc Computer Science (Software Engineering), University of Zambia, with merit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070B24;--bg2:#0E1540;--ink:#E8F1FF;--soft:#98A6CC;--cyan:#4DE8FF;--pink:#FF3D9A;--violet:#7B5CFF;--glass:rgba(255,255,255,.06);--line:rgba(255,255,255,.14)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:300 1.15rem/1.65 "Outfit",system-ui,sans-serif;background:radial-gradient(1200px 700px at 85% -10%,#2A1B7A 0,transparent 60%),radial-gradient(900px 600px at -10% 40%,#08305A 0,transparent 60%),var(--bg);background-attachment:fixed}
+h1,h2,h3,.disp{font-family:"Unbounded","Outfit",sans-serif}
+a{color:var(--cyan)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+main{max-width:1060px;margin:0 auto;padding:0 1.25rem 4rem;position:relative}
+section{padding:5rem 0 0}
+h2{font-size:clamp(1.4rem,4vw,2rem);font-weight:800;margin:0 0 1.5rem;background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+h1{font-size:clamp(2.4rem,9vw,6.2rem);line-height:1;margin:0;font-weight:800;letter-spacing:-.03em}
+h1 em{font-style:normal;display:block;background:linear-gradient(90deg,var(--cyan),var(--violet) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{margin:1.5rem 0 .5rem;font-size:clamp(1.1rem,3vw,1.5rem);min-height:2em}
+.role b{font-weight:600;color:var(--cyan)}
+.role .caret{display:inline-block;width:2px;height:1.1em;background:var(--pink);vertical-align:-.2em;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lede{max-width:36em;color:var(--soft)}
+.chip{display:inline-flex;align-items:center;gap:.6rem;margin-top:1rem;padding:.45rem 1rem;border:1px solid var(--line);border-radius:99px;background:var(--glass);backdrop-filter:blur(10px);font-size:.98rem}
+.chip i{width:9px;height:9px;border-radius:50%;background:#3DDC84;box-shadow:0 0 10px #3DDC84}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn{padding:.75rem 1.4rem;border-radius:12px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--ink);background:var(--glass)}
+.btn.main{background:linear-gradient(90deg,var(--cyan),var(--violet));color:#050818;border:0}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}
+.skill{all:unset;cursor:pointer;padding:1rem;border:1px solid var(--line);border-radius:14px;background:var(--glass);backdrop-filter:blur(10px);font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:.5rem;transition:box-shadow .25s,border-color .25s}
+.skill:focus-visible{outline:3px solid var(--pink)}
+.skill i{width:9px;height:9px;border-radius:50%;background:#44527E;flex:none}
+.skill[aria-pressed="true"]{border-color:var(--cyan);box-shadow:0 0 24px rgba(77,232,255,.35)}
+.skill[aria-pressed="true"] i{background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.readout{margin-top:1rem;min-height:3.5rem;padding:1rem 1.2rem;border-left:3px solid var(--pink);color:var(--soft)}
+.readout b{color:var(--ink)}
+/* projects */
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{position:relative;padding:1.5rem;border:1px solid var(--line);border-radius:20px;background:var(--glass);backdrop-filter:blur(12px);display:flex;flex-direction:column;gap:.6rem;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--x,50%) var(--y,0%),rgba(77,232,255,.18),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::before{opacity:1}
+.card h3{margin:0;font-size:1.15rem;font-weight:500}
+.card p{margin:0;color:var(--soft)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;padding-top:.6rem}
+.tags span{font-size:.85rem;padding:.15rem .7rem;border-radius:99px;border:1px solid var(--violet);color:#C9BEFF}
+.card a{font-weight:600}
+/* path */
+.tl{margin:0;padding:0 0 0 1.5rem;list-style:none;border-left:2px solid;border-image:linear-gradient(var(--cyan),var(--pink)) 1;display:grid;gap:1.6rem}
+.tl li{position:relative}
+.tl li::before{content:"";position:absolute;left:-1.9rem;top:.55rem;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.tl b{font-family:"Unbounded",sans-serif;font-weight:500;font-size:1.05rem}
+.tl small{display:block;color:var(--cyan)}
+.tl span{color:var(--soft)}
+.contact a.big{display:block;font:800 clamp(1.2rem,4.5vw,2.2rem) "Unbounded",sans-serif;word-break:break-word;text-decoration:none;color:var(--ink);margin:.4rem 0}
+.contact a.big:hover{color:var(--cyan)}
+footer{max-width:1060px;margin:0 auto;padding:1rem 1.25rem 3rem;color:var(--soft);font-size:.95rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.caret{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <h1>Mambwe Luke <em>Chilebela</em></h1>
+  <p class="role disp" aria-label="Software engineer, network engineer, problem solver"><span id="typed"></span><span class="caret"></span></p>
+  <p class="lede">I build web and mobile apps, and I install and fix the home broadband networks they run on. Based in Lusaka, Zambia.</p>
+  <span class="chip"><i></i>BSc Computer Science, University of Zambia, graduating with merit</span>
+  <div class="cta"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</header>
+
+<section id="skills" aria-labelledby="sk">
+  <h2 id="sk">Skills</h2>
+  <div class="skills" id="skills-list"></div>
+  <div class="readout" id="readout" aria-live="polite">Select a skill to see what I do with it.</div>
+</section>
+
+<section id="projects" aria-labelledby="pj">
+  <h2 id="pj">Projects</h2>
+  <div class="grid" id="projects-grid"></div>
+</section>
+
+<section id="path" aria-labelledby="pt">
+  <h2 id="pt">Experience and education</h2>
+  <ul class="tl">
+    <li><b>Field Network Engineer, Airtel Zambia</b><small>Dec 2025 to present</small><span>Install and configure CPE and ODU routers for Home Broadband customers.</span></li>
+    <li><b>Intern Software Developer, Gladtidings Software Limited</b><small>Jul 2025 to Jan 2026</small><span>Built and shipped features on real client projects.</span></li>
+    <li><b>BSc Computer Science (Software Engineering), University of Zambia</b><small>Completed 2026</small><span>Graduating with merit.</span></li>
+    <li><b>Certifications</b><small>Cisco CCNA 1 to 3 · Google Cloud Data Analytics</small></li>
+  </ul>
+</section>
+
+<section id="contact" class="contact" aria-labelledby="ct">
+  <h2 id="ct">Let's work together</h2>
+  <p>Open to software, IT and networking roles.</p>
+  <a class="big" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>
+  <a class="big" href="https://github.com/MambweLC">github.com/MambweLC</a>
+  <a class="big" href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+</section>
+</main>
+<footer>Mambwe Luke Chilebela · Lusaka, Zambia</footer>
+
+<script>
+/* ===== EDIT THIS BLOCK ===== */
+var ROLES=["Software engineer","Network field engineer","React and React Native developer"];
+var SKILLS=[
+  {n:"React",t:"Component-driven web interfaces. Add what you built with it."},
+  {n:"React Native",t:"Mobile apps for Android and iOS from one codebase."},
+  {n:"Node.js",t:"APIs and back-end services."},
+  {n:"PHP",t:"Server-side web apps."},
+  {n:"Databases",t:"MySQL, MongoDB and Firebase."},
+  {n:"Git and Linux",t:"Version control and daily work in the terminal."},
+  {n:"Networking",t:"Cisco CCNA 1 to 3 plus daily CPE and ODU router installs in the field."},
+  {n:"Data",t:"Google Cloud Data Analytics certified."}
+];
+var PROJECTS=[
+  {name:"Project name 1",desc:"One sentence: what it does and who it helps.",tags:["React","Firebase"],link:"https://github.com/MambweLC/REPO-NAME"},
+  {name:"Project name 2",desc:"One sentence: the problem you solved and the result.",tags:["React Native","Node.js"],link:"https://github.com/MambweLC/REPO-NAME"},
+  {name:"Project name 3",desc:"Your final-year project goes here.",tags:["PHP","MySQL"],link:"https://github.com/MambweLC/REPO-NAME"}
+];
+/* ===== END EDIT BLOCK ===== */
+
+var still=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* typed roles */
+var tp=document.getElementById("typed"),ri=0,ci=0,del=false;
+function type(){
+  var w=ROLES[ri];
+  if(still){tp.textContent=ROLES[0];return}
+  tp.textContent=w.slice(0,ci);
+  if(!del&&ci===w.length){del=true;return setTimeout(type,1600)}
+  if(del&&ci===0){del=false;ri=(ri+1)%ROLES.length}
+  ci+=del?-1:1;setTimeout(type,del?35:70);
+}
+type();
+
+/* skills */
+var sl=document.getElementById("skills-list"),out=document.getElementById("readout"),idle="Select a skill to see what I do with it.";
+SKILLS.forEach(function(s){
+  var b=document.createElement("button");b.className="skill";b.setAttribute("aria-pressed","false");
+  b.innerHTML="<span></span><i></i>";b.firstChild.textContent=s.n;
+  b.onclick=function(){
+    var on=b.getAttribute("aria-pressed")==="true";
+    sl.querySelectorAll(".skill").forEach(function(x){x.setAttribute("aria-pressed","false")});
+    if(on){out.textContent=idle}else{b.setAttribute("aria-pressed","true");out.innerHTML="<b></b>";out.firstChild.textContent=s.n+": ";out.appendChild(document.createTextNode(s.t))}
+  };
+  sl.appendChild(b);
+});
+
+/* projects */
+var pg=document.getElementById("projects-grid");
+PROJECTS.forEach(function(p){
+  var c=document.createElement("article");c.className="card";
+  c.innerHTML="<h3></h3><p></p><div class='tags'></div><a target='_blank' rel='noopener'>View on GitHub</a>";
+  c.querySelector("h3").textContent=p.name;c.querySelector("p").textContent=p.desc;
+  p.tags.forEach(function(t){var s=document.createElement("span");s.textContent=t;c.querySelector(".tags").appendChild(s)});
+  c.querySelector("a").href=p.link;
+  c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--x",(e.clientX-r.left)+"px");c.style.setProperty("--y",(e.clientY-r.top)+"px")});
+  pg.appendChild(c);
+});
+
+/* network canvas: nodes link up near the cursor */
+var cv=document.getElementById("net"),cx=cv.getContext("2d"),N=[],W,H,mx=-999,my=-999;
+function size(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;N=[];var n=Math.min(70,Math.floor(W*H/16000));for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+function draw(){
+  cx.clearRect(0,0,W,H);
+  N.forEach(function(a,i){
+    if(!still){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1}
+    for(var j=i+1;j<N.length;j++){var b=N[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<140){cx.strokeStyle="rgba(77,232,255,"+(.28*(1-d/140))+")";cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+    var m=Math.hypot(a.x-mx,a.y-my);
+    if(m<180){cx.strokeStyle="rgba(255,61,154,"+(.6*(1-m/180))+")";cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(mx,my);cx.stroke()}
+    cx.fillStyle=m<180?"#FF3D9A":"#4DE8FF";cx.beginPath();cx.arc(a.x,a.y,2,0,6.3);cx.fill();
+  });
+  if(!still)requestAnimationFrame(draw);
+}
+cv.parentNode.addEventListener("pointermove",function(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+cv.parentNode.addEventListener("pointerleave",function(){mx=my=-999});
+window.addEventListener("resize",function(){size();if(still)draw()});
+size();draw();
+</script>
+</body>
+</html>
