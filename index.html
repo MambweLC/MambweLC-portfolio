@@ -91,40 +91,38 @@ footer{max-width:1060px;margin:0 auto;padding:1rem 1.25rem 3rem;color:var(--soft
 <section id="path" aria-labelledby="pt">
   <h2 id="pt">Experience and education</h2>
   <ul class="tl">
-    <li><b>Field Network Engineer, Airtel Zambia</b><small>Dec 2025 to present</small><span>Install and configure CPE and ODU routers for Home Broadband customers.</span></li>
-    <li><b>Intern Software Developer, Gladtidings Software Limited</b><small>Jul 2025 to Jan 2026</small><span>Built and shipped features on real client projects.</span></li>
-    <li><b>BSc Computer Science (Software Engineering), University of Zambia</b><small>Completed 2026</small><span>Graduating with merit.</span></li>
-    <li><b>Certifications</b><small>Cisco CCNA 1 to 3 · Google Cloud Data Analytics</small></li>
+    <li><b>Field Network Engineer, Airtel Zambia</b><small>Dec 2025 to present</small><span>Install and maintain CPE and ODU routers for Airtel Home Broadband, and troubleshoot equipment and connectivity issues in the field.</span></li>
+    <li><b>Intern Software Developer, Gladtidings Software Limited</b><small>Jul 2025 to Jan 2026</small><span>Worked on web and application development, with databases and software engineering practices in a team.</span></li>
+    <li><b>BSc Computer Science (Software Engineering), University of Zambia</b><small>Finished 2026</small><span>Department of Computing and Informatics. Graduating with merit.</span></li>
+    <li><b>Certifications</b><small>Cisco CCNA 1, 2 and 3 · Cisco Introduction to Cybersecurity · Cisco IT Essentials</small><span>Google Cloud Data Analytics · NDG Linux Essentials · NDG Linux Unhatched</span></li>
   </ul>
 </section>
 
 <section id="contact" class="contact" aria-labelledby="ct">
   <h2 id="ct">Let's work together</h2>
   <p>Open to software, IT and networking roles.</p>
-  <a class="big" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>
+  <a class="big" href="mailto:mambwechilebela03@gmail.com">mambwechilebela03@gmail.com</a>
   <a class="big" href="https://github.com/MambweLC">github.com/MambweLC</a>
-  <a class="big" href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+  <a class="big" href="https://www.linkedin.com/in/mambwe-luke-chilebela-6255722b5">LinkedIn</a>
 </section>
 </main>
-<footer>Mambwe Luke Chilebela · Lusaka, Zambia</footer>
+<footer>Mambwe Luke Chilebela · Lusaka, Zambia · English, Nyanja, Bemba</footer>
 
 <script>
 /* ===== EDIT THIS BLOCK ===== */
 var ROLES=["Software engineer","Network field engineer","React and React Native developer"];
 var SKILLS=[
-  {n:"React",t:"Component-driven web interfaces. Add what you built with it."},
+  {n:"React",t:"Built the front end of my final-year project, the UNZA Student Storage Management System."},
   {n:"React Native",t:"Mobile apps for Android and iOS from one codebase."},
-  {n:"Node.js",t:"APIs and back-end services."},
-  {n:"PHP",t:"Server-side web apps."},
+  {n:"Node.js",t:"Back-end and API work, including the server of my final-year project."},
+  {n:"PHP",t:"Server-side web development."},
   {n:"Databases",t:"MySQL, MongoDB and Firebase."},
-  {n:"Git and Linux",t:"Version control and daily work in the terminal."},
-  {n:"Networking",t:"Cisco CCNA 1 to 3 plus daily CPE and ODU router installs in the field."},
-  {n:"Data",t:"Google Cloud Data Analytics certified."}
+  {n:"Git and GitHub",t:"Version control and collaboration with other developers."},
+  {n:"Networking",t:"Cisco CCNA 1 to 3, plus daily CPE and ODU router installs and troubleshooting at Airtel."},
+  {n:"Linux and Data",t:"NDG Linux Essentials and the Google Cloud Data Analytics Certificate."}
 ];
 var PROJECTS=[
-  {name:"Project name 1",desc:"One sentence: what it does and who it helps.",tags:["React","Firebase"],link:"https://github.com/MambweLC/REPO-NAME"},
-  {name:"Project name 2",desc:"One sentence: the problem you solved and the result.",tags:["React Native","Node.js"],link:"https://github.com/MambweLC/REPO-NAME"},
-  {name:"Project name 3",desc:"Your final-year project goes here.",tags:["PHP","MySQL"],link:"https://github.com/MambweLC/REPO-NAME"}
+  {name:"UNZA Student Storage Management System",desc:"My final-year project. A full-stack system that lets university students securely store and manage their belongings during holidays. It covers user registration, item tracking, payment receipt generation and admin management, and I documented the whole lifecycle from requirements to deployment preparation.",tags:["React.js","Node.js","MySQL"],link:""}
 ];
 /* ===== END EDIT BLOCK ===== */
 
@@ -162,7 +160,7 @@ PROJECTS.forEach(function(p){
   c.innerHTML="<h3></h3><p></p><div class='tags'></div><a target='_blank' rel='noopener'>View on GitHub</a>";
   c.querySelector("h3").textContent=p.name;c.querySelector("p").textContent=p.desc;
   p.tags.forEach(function(t){var s=document.createElement("span");s.textContent=t;c.querySelector(".tags").appendChild(s)});
-  c.querySelector("a").href=p.link;
+  if(p.link){c.querySelector("a").href=p.link}else{c.querySelector("a").remove()}
   c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--x",(e.clientX-r.left)+"px");c.style.setProperty("--y",(e.clientY-r.top)+"px")});
   pg.appendChild(c);
 });
